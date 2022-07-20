@@ -12,7 +12,7 @@ export default function DogList() {
           <div className="Dog col-lg-4 text-center" key={d.name}>
             <Link to={`/dogs/${d.name}`}>
               <img src={d.src} alt={d.name} />
-              <h3 className="underline">{d.name}</h3>
+              <h3 className="underline mt-3">{d.name}</h3>
             </Link>
           </div>
         ))}

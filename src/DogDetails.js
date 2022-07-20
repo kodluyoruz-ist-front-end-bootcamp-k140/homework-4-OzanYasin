@@ -25,7 +25,7 @@ export default function DogDetails() {
               </li>
             ))}
           </ul>
-          <div className="card-body text-center">
+          <div className="card-body text-">
             <Link to="/dogs" className="btn btn-primary">
               Home
             </Link>
