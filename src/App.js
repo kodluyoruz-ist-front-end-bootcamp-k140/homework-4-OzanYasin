@@ -1,14 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 import DogList from './DogList';
+import Navbar from './Navbar';
 import { Routes, Route } from 'react-router-dom';
-import './App.css';
 import DogDetails from './DogDetails';
+import './App.css';
 
 export default function App() {
   return (
-    <Routes>
-      <Route path="/dogs" element={<DogList />} />
-      <Route path="/dogs/:dogName" element={<DogDetails />} />
-    </Routes>
+    <div>
+      <Navbar />
+      <Routes>
+        <Route path="/dogs" element={<DogList />} />
+        <Route path="/dogs/:dogName" element={<DogDetails />} />
+      </Routes>
+    </div>
   );
 }

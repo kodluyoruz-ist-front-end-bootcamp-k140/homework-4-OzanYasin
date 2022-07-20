@@ -28,7 +28,7 @@ export default function DogDetails() {
             </ul>
             <div className="card-body">
               <Link to="/dogs" className="btn btn-info">
-                Go Back
+                Home
               </Link>
             </div>
           </div>
