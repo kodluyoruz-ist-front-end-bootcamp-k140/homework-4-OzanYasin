@@ -1,13 +1,15 @@
 import React from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, Navigate, useParams } from 'react-router-dom';
 import dogs from './DogData';
 import './DogDetails.css';
+import ErrorPage from './ErrorPage';
 
 export default function DogDetails() {
   const { dogName } = useParams();
   const currentDog = dogs.find(
     (dog) => dog.name.toLowerCase() === dogName.toLowerCase()
   );
+  if (!currentDog) return <ErrorPage />;
   const { src, name, age, facts } = currentDog;
   return (
     <div className="DogDetails row justify-content-center mt-5">
